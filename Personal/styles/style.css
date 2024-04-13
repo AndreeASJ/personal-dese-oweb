@@ -1,0 +1,861 @@
+/* Estilos Globales */
+/* Una disculpa profe, los colores no son lo mio xD (daltonismo) */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+
+body {
+  margin: auto;
+  overflow: auto;
+  /* Parte de la animacion de bg */
+  background: linear-gradient(315deg,rgb(50, 54, 54) 38%, rgb(50, 54, 54) 38%, rgb(14, 56, 54) 68%, rgb(26, 28, 29) 98%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+/* navbar estilos */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.5s;
+  background-color: #74674671;
+  font-family: "Raleway";
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  /* Tuve que darle in index alto porque por alguna razon se me escondia detras de las imagenes o backgrouds */
+  z-index: 999;
+
+}
+
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+}
+
+.navbar h1 {
+  margin: 0;
+  color: #4e4e4e;
+  font-family: "Raleway";
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background-color: #ffc5d6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1:hover {
+  cursor: pointer;
+  text-decoration-skip-ink: auto;
+  color: white;
+  background-color: #444;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  margin-right: 1rem;
+}
+
+#menu a {
+  text-align: right;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+#menu a:hover {
+  background-color:  rgba(90, 86, 55, 0.25);
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar form {
+  margin-top: 1rem;
+  display: flex;
+  margin-right: 30px;
+}
+
+.navbar input[type="search"] {
+  background-color: #312b2b;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 90%;
+  color: #ffffff;
+  padding-left: 1rem;
+}
+
+#Mainimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+#container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 60px;
+}
+
+#container>div {
+  margin-bottom: 20px;
+  background-color: rgba(242, 242, 242, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding: 1px;
+  font-family: "Raleway";
+  font-weight: bolder;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+h2 a {
+  background: #444;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  letter-spacing: 20px;
+  font-size: xx-large;
+  color: white;
+  animation: comein 1.5s 1 ease-in-out forwards;
+  border-radius: 10px;
+}
+
+/* Esta animacion solo entra cuando doy refresh */
+
+@keyframes comein {
+  0% {
+    letter-spacing: 80px;
+    color: rgba(255, 255, 255, 0);
+  }
+
+  70% {
+    letter-spacing: 20px;
+  }
+}
+
+/* Estilos en parrafos y labels */ 
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 100px;
+  font-family: "Raleway";
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 50px;
+
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: "Raleway";
+  font-size: medium;
+  font-weight: bold;
+}
+
+#sekai {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#sekai img {
+  max-width: 100%; /* Asegura que las imágenes no se extiendan más allá de su contenedor */
+  margin-bottom: 20px; /* Espacio entre imágenes */
+}
+
+/* Form contacto */
+
+#contact-form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 0px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+}
+
+#contact-form input[type="submit"] {
+  background-color: #333;
+  color: #ffffff4b;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form input[type="submit"]:hover {
+  background-color: #444;
+}
+
+#container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes gradient {
+
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Footer  */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer__container {
+  padding-block: 4rem 2rem;
+  text-align: center;
+  row-gap: 5rem;
+}
+
+.footer__content a,
+.footer__copy {
+  color: white;
+  font-family: "Raleway";
+  text-decoration: none;
+}
+
+.footer__links,
+.footer__social {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+
+.footer__social-link {
+  font-size: 1.5rem;
+  transition: transform 0.4s;
+}
+
+.footer__social-link:hover {
+  transform: translateY(-0.50rem);
+}
+
+@media screen and (min-width: 1150px) {
+   .container {
+    margin-inline: auto;
+  }
+  .footer__container {
+    row-gap: 6rem;
+    padding-block: 3.5rem;
+  }
+  .footer__content {
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+  }
+  .footer__logo {
+    font-size: var(--h2-font-size);
+  }
+  .footer__links {
+    column-gap: 3rem;
+  }
+  .footer__social {
+    column-gap: 1.5rem;
+  }
+}
+
+/* Animacion y transicion background */
+
+.wave {
+  position: fixed;
+  background: rgba(90, 86, 55, 0.25);
+  border-radius: 100% 100% 0 0;
+  width: 200%;
+  height: 12em;
+  animation: wave 5s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: .8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  10% {
+    transform: translateX(1);
+  }
+
+  30% {
+    transform: translateX(-25%);
+  }
+
+  60% {
+    transform: translateX(-50%);
+  }
+
+  80% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+
+/* Image sliders, estilos y backgrounds */
+
+:root {
+  --bg1: url("https://c4.wallpaperflare.com/wallpaper/74/949/231/anime-one-piece-monkey-d-luffy-wallpaper-preview.jpg");
+  --bg2: url("https://c4.wallpaperflare.com/wallpaper/534/883/678/anime-one-piece-monkey-d-luffy-wallpaper-preview.jpg");
+  --bg3: url("https://imgs.search.brave.com/7WO4jr3q-qYAIBhEcEW9Id43VB_6OY2OJGoJ6DjMvZw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90aGVh/bmltZXdlYi5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MTAvTHVmZnktR2Vh/ci0zLTEtMTAyNHg1/NzYuanBn");
+  --bg4: url("https://c4.wallpaperflare.com/wallpaper/553/527/816/one-piece-gear-fourth-monkey-d-luffy-hd-wallpaper-preview.jpg");
+  --bg5: url("https://c4.wallpaperflare.com/wallpaper/472/994/554/monkey-d-luffy-one-piece-gear-5th-hd-wallpaper-preview.jpg");
+  --bg6: url("https://images8.alphacoders.com/133/1338766.jpeg");
+  --bg7: url("https://c4.wallpaperflare.com/wallpaper/100/149/299/anime-one-piece-zoro-roronoa-wallpaper-preview.jpg");
+  --bg8: url("https://avatarfiles.alphacoders.com/368/368040.jpg");
+  --bg9: url("https://images6.alphacoders.com/133/1338764.jpeg");
+  --bg10: url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/03/one-piece-oden-enma-ame-no-habakiri.jpg?q=50&fit=crop&w=943&dpr=1.5");
+  --bg11: url("https://www.mundodeportivo.com/alfabeta/hero/2023/05/sanji-ifrit-jambe.jpg?width=768&aspect_ratio=16:9");
+  --bg12: url("https://tierragamer.com/wp-content/uploads/2021/12/one-piece-1034-sanji-queen-1.jpg");
+  --bg13: url("https://www.dexerto.com/cdn-cgi/image/width=1080,quality=60,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/05/30/one-piece-sanji-diable-jambe.jpeg");
+  --bg14: url("https://i.blogs.es/5fca68/sanji/1024_2000.jpeg");
+  --bg15: url("https://www.dexerto.com/cdn-cgi/image/width=1080,quality=60,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/05/08/one-piece-zoro-sanji-vs-king-queen.jpeg");
+  --bg16: url("https://images7.alphacoders.com/135/1353418.png");
+  --bg17: url("https://images7.alphacoders.com/130/1306626.jpeg");
+  --bg18: url("https://images5.alphacoders.com/983/983774.jpg");
+  --bg19: url("https://images2.alphacoders.com/125/1259335.png");
+  --bg20: url("https://images2.alphacoders.com/130/1306622.jpeg");
+  --bg21: url("https://images7.alphacoders.com/119/1190842.jpg");
+  --bg22: url("https://images8.alphacoders.com/134/1345301.png");
+  --bg23: url("https://images5.alphacoders.com/130/1306618.jpeg");
+  --bg24: url("https://avatarfiles.alphacoders.com/328/328895.jpg");
+  --bg25: url("https://images3.alphacoders.com/135/1355322.jpeg");
+  --bg26: url("https://images6.alphacoders.com/130/1306624.jpeg");
+  --bg27: url("https://images5.alphacoders.com/130/1301606.jpg");
+  --bg28: url("https://images5.alphacoders.com/131/1312630.jpeg");
+  --bg29: url("https://images7.alphacoders.com/130/1306615.jpeg");
+  --bg30: url("https://images8.alphacoders.com/132/1326226.jpeg");
+  --bg31: url("https://images2.alphacoders.com/132/1327085.png");
+  --bg32: url("https://images.alphacoders.com/130/1306627.jpeg");
+  --bg33: url("https://images.alphacoders.com/938/938946.png");
+  --bg34: url("https://images6.alphacoders.com/122/1225550.jpg");
+  --bg35: url("https://images8.alphacoders.com/130/1306617.jpeg");
+  --bg36: url("https://images6.alphacoders.com/127/1271018.jpg");
+}
+
+/* Obtenemos los child a pie porque no pude hacer jalar la @function de abajo */
+
+.box:nth-child(1) {
+  background-image: var(--bg1);
+}
+
+.box:nth-child(2) {
+  background-image: var(--bg2);
+}
+
+.box:nth-child(3) {
+  background-image: var(--bg3);
+}
+
+.box:nth-child(4) {
+  background-image: var(--bg4);
+}
+
+.box:nth-child(5) {
+  background-image: var(--bg5);
+}
+
+.box1:nth-child(1) {
+  background-image: var(--bg6);
+}
+
+.box1:nth-child(2) {
+  background-image: var(--bg7);
+}
+
+.box1:nth-child(3) {
+  background-image: var(--bg8);
+}
+
+.box1:nth-child(4) {
+  background-image: var(--bg9);
+}
+
+.box1:nth-child(5) {
+  background-image: var(--bg10);
+}
+
+.box2:nth-child(1) {
+  background-image: var(--bg11);
+}
+
+.box2:nth-child(2) {
+  background-image: var(--bg12);
+}
+
+.box2:nth-child(3) {
+  background-image: var(--bg13);
+}
+
+.box2:nth-child(4) {
+  background-image: var(--bg14);
+}
+
+.box2:nth-child(5) {
+  background-image: var(--bg15);
+}
+
+.box3:nth-child(1) {
+  background-image: var(--bg16);
+}
+
+.box3:nth-child(2) {
+  background-image: var(--bg17);
+}
+
+.box3:nth-child(3) {
+  background-image: var(--bg18);
+}
+.box4:nth-child(1) {
+  background-image: var(--bg19);
+}
+
+.box4:nth-child(2) {
+  background-image: var(--bg20);
+}
+
+.box4:nth-child(3) {
+  background-image: var(--bg21);
+}
+.box5:nth-child(1) {
+  background-image: var(--bg22);
+}
+
+.box5:nth-child(2) {
+  background-image: var(--bg23);
+}
+
+.box5:nth-child(3) {
+  background-image: var(--bg24);
+}
+.box6:nth-child(1) {
+  background-image: var(--bg25);
+}
+
+.box6:nth-child(2) {
+  background-image: var(--bg26);
+}
+
+.box6:nth-child(3) {
+  background-image: var(--bg27);
+}
+.box7:nth-child(1) {
+  background-image: var(--bg28);
+}
+
+.box7:nth-child(2) {
+  background-image: var(--bg29);
+}
+
+.box7:nth-child(3) {
+  background-image: var(--bg30);
+}
+
+.box8:nth-child(1) {
+  background-image: var(--bg31);
+}
+
+.box8:nth-child(2) {
+  background-image: var(--bg32);
+}
+
+.box8:nth-child(3) {
+  background-image: var(--bg33);
+}
+.box9:nth-child(1) {
+  background-image: var(--bg34);
+}
+
+.box9:nth-child(2) {
+  background-image: var(--bg35);
+}
+
+.box9:nth-child(3) {
+  background-image: var(--bg36);
+}
+
+@function get-background($index) {
+  @return var(--bg#{$index});
+}
+
+/* Propiedades */ 
+
+.box-container,
+.box-container1,
+.box-container2,
+.box-container3,
+.box-container4,
+.box-container5,
+.box-container6,
+.box-container7,
+.box-container8,
+.box-container9 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+  width: 100%;
+  max-width: 950px;
+  height: 80vh;
+  max-height: 500px;
+  padding: 1rem;
+  margin: 0 auto; 
+}
+
+.box,
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9 {
+  width: 25%;
+  height: 405px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: width 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  background-size: cover; /* Adjusted */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.overlay,
+.overlay1,
+.overlay2,
+.overlay3,
+.overlay4,
+.overlay5,
+.overlay6,
+.overlay7,
+.overlay8,
+.overlay9 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+/* Estos deberian de ser como obtenemos las imagenes para el slider si funcionara el @function y @for */ 
+
+@for $i from 1 through 5 {
+  .box:nth-child(#{$i}) {
+    background-image: var(--bg#{$i});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 120%;
+  }
+}
+
+.box.closed,
+.box1.closed,
+.box2.closed,
+.box3.closed,
+.box4.closed,
+.box5.closed,
+.box6.closed,
+.box7.closed,
+.box8.closed,
+.box9.closed {
+  width: 5%;
+}
+
+.box.expanded,
+.box1.expanded,
+.box2.expanded,
+.box3.expanded,
+.box4.expanded,
+.box5.expanded,
+.box6.expanded,
+.box7.expanded,
+.box8.expanded,
+.box9.expanded {
+  width: 85%;
+}
+
+.overlay,
+.overlay1,
+.overlay2,
+.overlay3,
+.overlay4,
+.overlay5,
+.overlay6,
+.overlay7,
+.overlay8,
+.overlay9 {
+  opacity: 1;
+}
+
+/* Frutas slider cards */
+
+.slider,
+.slider1,
+.slider2 {
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+  font-family: "Raleway";
+  font-size: large;
+  font-weight: bolder;
+}
+
+.item,
+.item1,
+.item2 {
+  position: absolute;
+  width: 320px;
+  height: 560px;
+  text-align: justify;
+  background-color: #e6dedea6;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 170px);
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.item-image {
+  width: 65%;
+  height: 65%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: auto;
+}
+
+#next,
+#next1,
+#next2 {
+  position: absolute;
+  right: 50px;
+  top: 40%;
+}
+
+#prev,
+#prev1,
+#prev2 {
+  position: absolute;
+  left: 50px;
+  top: 40%;
+}
+
+#prev,
+#next,
+#prev1,
+#next1,
+#prev2,
+#next2  {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+  font-weight: bold;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+#prev:hover,
+#next:hover,
+#prev1:hover,
+#next1:hover,
+#prev2:hover,
+#next2:hover {
+  opacity: 1;
+}
+
+/* Contact form */
+
+#contacto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#contacto form {
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+#contacto img {
+  max-width: 20%;
+  margin-top: 20px;
+  
+}
+
+.feedback-input {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #2522228f;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-input:focus {
+  border: 2px solid #555;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #555;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+[type="submit"]:hover {
+  background: #777;
+}
+
+#responseMessage {
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#responseMessage.success {
+  color: #008000;
+  /* Green background for success */
+}
+
+#responseMessage.error {
+  color: #FF0000;
+  /* Red background for errors */
+}
+
+#responseMessage.show {
+  opacity: 1;
+}
